@@ -1,0 +1,80 @@
+/*-----------------------------------------
+# Forms: Common
+-----------------------------------------*/
+input.form-control,
+textarea.form-control,
+form.woocommerce-checkout input,
+form.woocommerce-form-coupon input,
+form.woocommerce-checkout .select2-selection,
+form.woocommerce-checkout textarea {
+  border: 1px solid #ddd;
+  border-radius: 0;
+  color: $black;
+  line-height: 1.4em;
+  padding: 20px;
+  width: 100%;
+  font-size: 14px;
+  background: #fff;
+}
+
+/*-----------------------------------------
+# Forms: Woocommerce
+-----------------------------------------*/
+form.woocommerce-checkout, form.woocommerce-form-coupon {
+  input, .select2-selection, textarea {
+    height: 42px;
+    padding: 8px 20px;
+  }
+
+  textarea {
+    height: 200px;
+  }
+  
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 8px;
+  }
+}
+
+.woocommerce {
+  .showcoupon {
+    text-decoration: underline;
+  }
+
+  .woocommerce-checkout-review-order {
+    margin-bottom: $section-spacing;
+  }
+}
+
+/*-----------------------------------------
+# Forms: Contact Form 7
+-----------------------------------------*/
+.wpcf7-form-control-wrap {
+  margin-bottom: 15px;
+  display: block;
+}
+
+.wpcf7-not-valid-tip {
+  text-align: left;
+  font-size: 0.9em;
+  font-weight: 100; 
+}
+
+/*-----------------------------------------
+# Forms: Newsleter (Mailchimp)
+-----------------------------------------*/
+.footer-newsletter {
+  .mc4wp-form-fields { 
+    height: 42px;
+    position: relative;
+  }
+
+  .mc4wp-response {
+    font-size: 0.9em;
+    padding-top: 15px;
+    color: $red;
+
+    .mc4wp-success {
+      color: green;
+    } 
+  }
+}

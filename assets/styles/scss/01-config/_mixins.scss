@@ -1,0 +1,91 @@
+/*-----------------------------------------
+# Mixins & Extended Classes
+-----------------------------------------*/
+
+// Webkit & Cross-browser properties
+//---------------------------------------//
+@mixin transition($value) {
+  -moz-transition: $value;
+  -ms-transition: $value;
+  -o-transition: $value; 
+  -webkit-transition: $value;
+  transition: $value;
+}
+
+@mixin transform($value) {
+  -moz-transform: $value;
+  -ms-transform: $value;
+  -o-transform: $value; 
+  -webkit-transform: $value;
+  transform: $value;
+}
+
+@mixin box-shadow($value) {
+  -moz-box-shadow: $value;
+  -ms-box-shadow: $value;
+  -o-box-shadow: $value; 
+  -webkit-box-shadow: $value;
+  box-shadow: $value;
+}
+
+@mixin box-sizing($value) {
+  -webkit-box-sizing: $value;
+  -moz-box-sizing: $value;
+  box-sizing: $value;
+}
+
+// Buttons
+//---------------------------------------//
+%btn {  
+  border: none;
+  clear: both;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  padding: 10px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  @include transition(ease .3s);
+}
+
+@mixin btn-background($btn-background) {
+  @extend %btn;
+  background-color: $btn-background;
+  border: 3px solid $btn-background;
+  display: inline-block;
+
+  &:hover {
+      background-color: transparent;
+      color: $btn-background;
+      text-decoration: none;
+  }
+}
+
+@mixin btn-outline($outline-color, $hover-color) {
+  @extend %btn;
+  background-color: transparent;
+  border: 3px solid $outline-color;
+  color: $outline-color;
+
+  &:hover, &:active {
+      background-color: $outline-color;
+      border-color: $outline-color;
+      color: $hover-color;
+      text-decoration: none;
+  }
+}
+
+// Mixins: Misc
+//---------------------------------------//
+%fa-icon {
+  display: inline-block;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  padding-right: 8px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}

@@ -1,0 +1,46 @@
+// Breakpoints
+//---------------------------------------//
+$grid-breakpoint-sm: 576px;
+$grid-breakpoint-md: 768px;
+$grid-breakpoint-lg: 992px;
+$grid-breakpoint-xl: 1200px;
+
+// Colors
+//---------------------------------------//
+$black: #1f1f1f;
+$white: #fafafa;
+$gray: #cccccc;
+$gray-light: #efefef;
+$gray-dark: #5f5f5f;
+$red: #cf2424;
+$opaque: rgba(0, 0, 0, 0.7);
+
+$colors-arr: (
+  "black": $black,
+  "white": $white,
+  "gray": $gray,
+  "gray-light": $gray-light,
+  "gray-dark": $gray-dark,
+  "red": $red
+);
+
+// Spacing
+//---------------------------------------//
+$section-spacing: 80px;
+
+// Sizes
+//---------------------------------------//
+$header-height: 65px;
+$fsize-arr: (
+  "xs": 12px,
+  "sm": 16px,
+  "sm-md": 20px,
+  "md": 24px,
+  "md-lg": 30px,
+  "lg": 36px
+);
+$fweight-arr: (
+  "light": 300,
+  "normal": 400,
+  "bold": 700
+);

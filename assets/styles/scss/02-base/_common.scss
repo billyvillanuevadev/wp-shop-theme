@@ -1,0 +1,17 @@
+/*-----------------------------------------
+# Common
+-----------------------------------------*/
+body {
+  position: relative;
+
+  &.modal-open {
+    padding-right: 0px !important;
+  }
+}
+
+a {
+  &, &:hover, &:active, &:focus {
+    color: $black;
+    text-decoration: none;
+  }
+}

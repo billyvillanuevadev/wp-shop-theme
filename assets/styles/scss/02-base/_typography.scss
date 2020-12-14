@@ -1,0 +1,96 @@
+/*-----------------------------------------
+# Typography: Common
+-----------------------------------------*/
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*-----------------------------------------
+# Typography: Titles & Headings
+-----------------------------------------*/
+h1, h2, h3, h4, h5, h6,
+.section-title,
+.page-title,
+.logo {
+  font-family: 'Lato', sans-serif;
+}
+
+.header-title {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.section-title {
+  text-transform: uppercase;
+  font-size: 24px;
+  text-align: center;
+}
+
+.header-title, .page-title {
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-size: 3em;
+  line-height: 1.2em;
+  margin-bottom: 0.2em;
+
+  @media (min-width: $grid-breakpoint-md) {
+    font-size: 4em;
+    line-height: 1.2em;
+  }
+}
+
+.page-title {
+  font-weight: 100;
+}
+
+.hov-box-info {
+  h3 {
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 1em;
+    text-transform: uppercase;
+    margin: 0;
+  } 
+}
+
+/*-----------------------------------------
+# Typography: Logo
+-----------------------------------------*/
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  line-height: 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*-----------------------------------------
+# Typography: Links
+-----------------------------------------*/
+.icon-link {
+  color: $black;
+
+  &:hover {
+    color: $gray;
+  }
+}
+
+/*-----------------------------------------
+# Typography: Font Size
+-----------------------------------------*/
+@each $class, $value in $fsize-arr {
+  .fs-#{$class} {
+    font-size: $value;
+    line-height: 1em;
+  }
+}
+
+/*-----------------------------------------
+# Typography: Font Weight
+-----------------------------------------*/
+@each $class, $value in $fweight-arr {
+  .fw-#{$class} {
+    font-weight: $value;
+  }
+}

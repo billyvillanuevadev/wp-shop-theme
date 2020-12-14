@@ -1,0 +1,43 @@
+/*-----------------------------------------
+# Buttons
+-----------------------------------------*/
+.btn-default,
+.modal .woocommerce .add_to_cart_button {
+  @include btn-background($black);
+}
+
+.btn-outline-white {
+  @include btn-outline($white, $black);
+}
+
+.modal .woocommerce {
+  .add_to_cart_button {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-radius: 0;
+    width: 100%;
+    font-size: inherit;
+
+    &:before {
+      @extend %fa-icon;
+      content: "\f07a";
+    }
+  
+    &.loading::after {
+      margin-top: 5px;
+    }
+  }
+
+  a.added_to_cart {
+    color: $black;
+    font-weight: 700;
+    padding-top: 15px;
+    text-align: right;
+    display: block;
+
+    &:before {
+      @extend %fa-icon;
+      content: "\f054";
+    }
+  }
+}

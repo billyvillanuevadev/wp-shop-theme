@@ -1,0 +1,39 @@
+/*-----------------------------------------
+# Modal: Product single modal
+-----------------------------------------*/
+#modal-product {
+  @include transition(all ease .3s);
+
+  .modal-header {
+    padding: 5px 15px;
+    border: 0;
+
+    .close {
+      font-size: 35px;
+    }
+  }
+
+  .modal-body {
+    min-height: 80vh;
+    max-height: 80vh;
+  }
+
+  .modal-content {
+    position: relative;
+  }
+
+  .btn-group.btn-group-toggle {
+    & > .btn {
+      border-radius: 0 !important;
+      
+      &.active {
+        background: $black;
+      }
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+

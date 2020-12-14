@@ -1,0 +1,83 @@
+/*-----------------------------------------
+# Layout: Margins and Paddings
+-----------------------------------------*/
+$m-sizes: 10, 20, 30, 40, 60, 80;
+@each $m-size in $m-sizes {
+  .mt-#{$m-size} {
+    margin-top: #{$m-size}px !important;
+  }
+  .mb-#{$m-size} {
+    margin-bottom: #{$m-size}px !important;
+  }
+  .pt-#{$m-size} {
+    margin-top: #{$m-size}px !important;
+  }
+  .pb-#{$m-size} {
+    margin-bottom: #{$m-size}px !important;
+  }
+}
+
+/*-----------------------------------------
+# Layout: Thumbnail with Description
+-----------------------------------------*/
+.layout-thumb-side-desc {
+  $thumb-img-width: 165px;
+  $thumb-img-height: $thumb-img-width;
+
+  position: relative;
+  min-height: $thumb-img-height;
+
+  .layout-thumb {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .layout-desc {
+    margin-left: $thumb-img-width;
+  }
+
+  .prod-remove {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: -30px;
+  }
+}
+
+.vcenter-container {
+  position: relative;
+  height: 100%;
+
+  .vcenter-content {
+    &.vcenter-mobile-off {
+      position: relative;
+      
+      @media (min-width: $grid-breakpoint-md) {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+/*-----------------------------------------
+# Layout: Woocommerce Checkout Page
+-----------------------------------------*/
+.woocommerce-checkout {
+  .col-1, .col-2 {
+    width: 100% !important;
+    -ms-flex: unset;
+    flex: unset;
+    max-width: none;
+  }
+
+  .order_comments, 
+  .woocommerce-input-wrapper {
+    display: block;
+    width: 100%;
+  }
+}

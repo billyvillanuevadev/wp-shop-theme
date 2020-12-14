@@ -1,0 +1,11 @@
+/*-----------------------------------------
+# Color classes
+-----------------------------------------*/
+@each $color-name, $color-value in $colors-arr {
+  .bg-#{$color-name} {
+    background: $color-value !important;
+  }
+  .tc-#{$color-name} {
+    color: $color-value !important;
+  }
+}

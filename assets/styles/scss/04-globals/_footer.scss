@@ -1,0 +1,93 @@
+/*-----------------------------------------
+# Footer
+-----------------------------------------*/
+#global-footer {
+  .footer-newsletter {
+    form {
+      position: relative;
+      text-align: left;
+    }
+
+    form input[type=email] {
+      width: 100%;
+      padding-right: 160px;
+      
+      &, &:hover, &:active, &:focus {
+        outline: none;
+      }
+    }
+
+    input[type=submit] {
+      min-width: 160px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      font-size: 16px;
+      padding: 0 20px;
+    }
+  }
+
+  .footer-top {
+
+    h4 {
+      font-size: 16px;
+      font-weight: bold;
+      padding-bottom: 12px;
+    }
+    
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .footer-links ul i {
+      padding-right: 2px;
+      color: #106eea;
+      font-size: 18px;
+      line-height: 1;
+    }
+    
+    .footer-links ul li {
+      padding: 7px 0;
+      display: flex;
+      align-items: center;
+
+      i {
+        color: $black;
+        margin-right: 5px;
+        font-size: 0.8em;
+      }
+    }
+    
+    .footer-links ul li:first-child {
+      padding-top: 0;
+    }
+    
+    .footer-links ul a {
+      color: $black;
+      display: inline-block;
+      line-height: 1;
+      @include transition(0.3s);
+    }
+    
+    .footer-links ul a:hover {
+      text-decoration: none;
+      color: $red;
+    }
+    
+    .social-links a {
+      color: $black;
+      display: inline-block;
+      line-height: 1;
+      padding: 8px 0;
+      margin-right: 4px;
+      text-align: center;
+    }
+  }
+  
+  .credits a {
+    text-decoration: underline;
+  }
+}

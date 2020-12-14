@@ -1,0 +1,5 @@
+1. Install npm dependencies. Run `npm install`. (Make sure you have node js installed)
+2. Use gulp to compile and minify the SCSS/CSS and JS.
+3. Run `gulp` command to compile and monitor the real-time file changes.
+
+- Billy Villanueva

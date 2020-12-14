@@ -1,0 +1,225 @@
+/*-----------------------------------------
+# Header: Logo
+-----------------------------------------*/
+.logo-grunge {
+  background: url("../../assets/images/grunge-texture.jpg") -328px -20px;
+  color: $white;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+
+  $logo-border-width: 2px;
+  span {
+    display: block;
+    position: absolute;
+    background: url("../../assets/images/grunge-texture.jpg") -328px -79px;
+
+    &.top, &.bottom {
+      width: 100%;
+      height: $logo-border-width;
+      left: 0;
+      top: 0;
+    }
+
+    &.bottom {
+      top: auto;
+      bottom: 0;
+    }
+
+    &.left, &.right {
+      width: $logo-border-width;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+
+    &.right {
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+/*-----------------------------------------
+# Header: Sticky Header Nav
+-----------------------------------------*/
+.xbv-sticky-header {
+  z-index: 998;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  @include transition(all .4s ease);
+
+  .xbv-sticky-header-inner {
+    z-index: 999;
+    position: relative;
+    width: 100%;
+    background: transparent;
+    padding: 20px 0;
+    @include transform(translateZ(0));
+    @include transition(all .3s ease);
+  }
+
+  &.sticky {
+    position: fixed;
+    @include transition(all .4s ease);
+    
+    .xbv-sticky-header-inner {
+      background: $black;
+      top: 0;
+      left: 0;
+      padding: 0;
+      @include box-shadow(0 1px 15px rgba(0,0,0,.15));
+      @include transition(all .3s ease);
+    }
+  }
+}
+
+/*-----------------------------------------
+# Header: Navbar
+-----------------------------------------*/
+#global-header {
+  .navbar {
+    position: relative;
+
+    .nav-item {
+      padding-left: 10px;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 3px;
+
+      .nav-link {
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+
+    .navbar-collapse {
+      padding-right: 35px;
+      background: $black;
+
+      @media (min-width: $grid-breakpoint-lg) {
+        background: none;
+      }
+
+    }
+  }
+
+  .icons-absolute {
+    position: absolute;
+    right: 15px;
+    top: 18px;
+    font-size: 20px;
+
+    .navbar-toggler {
+      padding: 0;
+      color: $white;
+
+      &.collapsed {
+        color: rgba($white,.5);
+      }
+    }
+
+    .cart-toggler {
+      line-height: 1em;
+      font-size: 16px;
+      height: auto;
+      min-height: auto;
+      margin-left: 15px;
+      top: -2px;
+      position: relative;
+
+      color: rgba($white,.5);
+      &:hover {
+        color: $white;
+      }
+    }
+
+    .navbar-toggler,
+    .cart-toggler {
+      border: none;
+
+      &:focus, &:active, &:hover {
+        border: none;
+        outline: none;
+      }
+    }
+  }
+}
+
+/*-----------------------------------------
+# Header: Hero Image Banner
+-----------------------------------------*/
+.xbv-image-banner-header {
+  position: relative;
+  background-color: $black;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 150px;
+
+  .page-title {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    display: block; 
+    width: 100%;
+  }
+
+  @media (min-width: $grid-breakpoint-lg) {
+    height: 250px;
+
+    .page-title {
+      bottom: 30px;
+    }
+  }
+}
+
+/*-----------------------------------------
+# Header: Hero Video Banner
+-----------------------------------------*/
+.xbv-video-header {
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $black;
+  opacity: 0.5;
+  z-index: 1;
+}
